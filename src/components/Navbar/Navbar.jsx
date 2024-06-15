@@ -1,6 +1,7 @@
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
+import Darkmode from "./Darkmode";
 
 const Navbar = () => {
   return (
@@ -15,6 +16,7 @@ const Navbar = () => {
               Shopsy
             </a>
           </div>
+
           {/* search bar */}
           <div className="flex items-center justify-between gap-4">
             <div className="group relative hidden sm:block">
@@ -25,6 +27,7 @@ const Navbar = () => {
               />
               <IoMdSearch className="group-hover:text-primary absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
             </div>
+
             {/* order button */}
             <button
               onClick={() => alert("Odering is not available yet")}
@@ -35,11 +38,15 @@ const Navbar = () => {
               </span>
               <FaCartShopping className="cursor-pointer text-xl text-white drop-shadow-sm" />
             </button>
+
             {/* Darkmode Switch */}
+            <div>
+              <Darkmode />
+            </div>
           </div>
         </div>
       </div>
-      {/* lowe Navbar */}
+      {/* lower Navbar */}
       <div></div>
     </div>
   );
